@@ -1,0 +1,77 @@
+body{
+    background-color: #383838   ;
+}
+
+.carousel-inner .carousel-item {
+    height: 300px;
+  }
+  
+.carousel-item img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-height: 200px;
+  }
+
+.carousel-overlay {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Ensure the overlay appears above the carousel */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .mypic{
+    position: relative;
+    border-radius: 50%;
+    width: 190px;   
+    height: 190px;
+    border:2px solid white;
+    
+
+  }
+
+.card-title{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+
+}
+footer{
+
+    margin-top:30px;
+}
+.animated-card {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .animated-card:hover {
+    transform:scale(1.05);
+  }
+
+ a{
+    text-decoration: none;
+    color: black;
+ }
+ .more{
+    color: white;
+ }
+
+ .img-fluid{
+    min-height: 21rem;
+
+ }
+ @keyframes shake {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-10px); }
+    40% { transform: translateX(10px); }
+    60% { transform: translateX(-10px); }
+    80% { transform: translateX(10px); }
+    100% { transform: translateX(0); }
+  }
+
+  .shake-button {
+    animation: shake 1s infinite;
+  }
