@@ -1,5 +1,3 @@
-
-
 function saveText() {
   var textInput = document.getElementById("textInput").value;
   var storedText = localStorage.getItem("storedText");
@@ -25,3 +23,21 @@ function showStoredText() {
 window.onload = showStoredText;
 
 
+// meme genearating API
+const meme_btn = document.querySelector(".frame .meme");
+const meme_img = document.querySelector(".frame .meme_image");
+
+const updateDetails=(url,title,author)=>{
+  meme_img.setAttribute("src",url);
+
+}
+meme_btn.addEventListener(
+  "click",
+  (generate = () => {
+    fetch(" https://meme-api.com/gimme/programming_memes")
+      .then((response) => response.json())
+      .then((data) => {
+        updateDetails(data.url,data.title,data.author);
+      });
+  })
+);

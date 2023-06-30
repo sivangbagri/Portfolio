@@ -1,151 +1,181 @@
-body{
-    background-color: #383838   ;
+body {
+  background-color: #383838;
 }
 
 
 .hover-text:hover span {
   display: none
 }
+
 .hover-text:hover::before {
   content: "Unstoppable, Unapologetic, Unforgettable."
   ;
 }
+
 .carousel-inner .carousel-item {
-    height: 300px;
-  }
-  
+  height: 300px;
+}
+
 .carousel-item img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      min-height: 200px;
-  }
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 200px;
+}
 
 .carousel-overlay {
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1; /* Ensure the overlay appears above the carousel */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .mypic{
-    position: relative;
-    border-radius: 50%;
-    width: 190px;   
-    height: 190px;
-    border:2px solid white;
-    
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  /* Ensure the overlay appears above the carousel */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  }
-
-.card-title{
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.mypic {
+  position: relative;
+  border-radius: 50%;
+  width: 190px;
+  height: 190px;
+  border: 2px solid white;
 
 
 }
-footer{
 
-    margin-top:30px;
+.card-title {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+
 }
+
+footer {
+
+  margin-top: 30px;
+}
+
 .animated-card {
-    transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+}
+
+.animated-card:hover {
+  transform: scale(1.05);
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.more {
+  color: white;
+}
+
+.img-fluid {
+  min-height: 24rem;
+
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
   }
 
-  .animated-card:hover {
-    transform:scale(1.05);
+  20% {
+    transform: translateX(-10px);
   }
 
- a{
-    text-decoration: none;
-    color: black;
- }
- .more{
-    color: white;
- }
-
- .img-fluid{
-    min-height: 24rem;
-
- }
- @keyframes shake {
-    0% { transform: translateX(0); }
-    20% { transform: translateX(-10px); }
-    40% { transform: translateX(10px); }
-    60% { transform: translateX(-10px); }
-    80% { transform: translateX(10px); }
-    100% { transform: translateX(0); }
+  40% {
+    transform: translateX(10px);
   }
 
-  .shake-button {
-    animation: shake 1s infinite;
+  60% {
+    transform: translateX(-10px);
   }
-  .custom-btn {
-    width: 130px;
-    height: 40px;
-    color: #fff;
-    border-radius: 5px;
-    padding: 10px 25px;
-    font-family: 'Lato', sans-serif;
-    font-weight: 500;
-    background: transparent;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    position: relative;
-    display: inline-block;
-     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-     7px 7px 20px 0px rgba(0,0,0,.1),
-     4px 4px 5px 0px rgba(0,0,0,.1);
-    outline: none;
+
+  80% {
+    transform: translateX(10px);
   }
-  .btn-5 {
-    width: 130px;
-    height: 40px;
-    line-height: 42px;
-    padding: 0;
-    border: none;
-    /* background: rgb(245, 245, 245); */
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.shake-button {
+  animation: shake 1s infinite;
+}
+
+.custom-btn {
+  width: 130px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+    7px 7px 20px 0px rgba(0, 0, 0, .1),
+    4px 4px 5px 0px rgba(0, 0, 0, .1);
+  outline: none;
+}
+
+.btn-5 {
+  width: 130px;
+  height: 40px;
+  line-height: 42px;
+  padding: 0;
+  border: none;
+  /* background: rgb(245, 245, 245); */
   background: rgba(19, 18, 18, 0.509)
-  }
-  .btn-5:hover {
-    color: #f8f8f8;
-    background: transparent;
-     box-shadow:none;
-  }
-  .btn-5:before,
-  .btn-5:after{
-    content:'';
-    position:absolute;
-    top:0;
-    right:0;
-    height:2px;
-    width:0;
-    background:white;
-    box-shadow:
-     -1px -1px 5px 0px #fff,
-     7px 7px 20px 0px #0003,
-     4px 4px 5px 0px #0002;
-    transition:400ms ease all;
-  }
-  .btn-5:after{
-    right:inherit;
-    top:inherit;
-    left:0;
-    bottom:0;
-  }
-  .btn-5:hover:before,
-  .btn-5:hover:after{
-    width:100%;
-    transition:800ms ease all;
-  }
+}
 
-  
+.btn-5:hover {
+  color: #f8f8f8;
+  background: transparent;
+  box-shadow: none;
+}
 
-  
-  @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.btn-5:before,
+.btn-5:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 2px;
+  width: 0;
+  background: white;
+  box-shadow:
+    -1px -1px 5px 0px #fff,
+    7px 7px 20px 0px #0003,
+    4px 4px 5px 0px #0002;
+  transition: 400ms ease all;
+}
+
+.btn-5:after {
+  right: inherit;
+  top: inherit;
+  left: 0;
+  bottom: 0;
+}
+
+.btn-5:hover:before,
+.btn-5:hover:after {
+  width: 100%;
+  transition: 800ms ease all;
+}
+
+
+
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 * {
   margin: 0;
@@ -167,7 +197,8 @@ footer{
 .card-title:hover {
   color: #fff;
   text-shadow: 0 0 5px #f4f4f4,
-              0 0 25px #000000,
-              0 0 50px #0c1b1c,
-              0 0 100px #0d01b8;
+    0 0 25px #000000,
+    0 0 50px #0c1b1c,
+    0 0 100px #0d01b8;
 }
+
